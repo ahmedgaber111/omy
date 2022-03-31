@@ -16,7 +16,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/redirct/{service}', 'Socialcontroller@redirect');
+Route::get('/callback/{service}', 'Socialcontroller@callbacl');
+
+
 //['verify'=>true]
 //->middleware('verified')
+//1152864505253885
+//3c0f373ff6fbb1be86015e2fe4785d39
