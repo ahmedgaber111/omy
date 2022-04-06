@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use PHPUnit\Util\Filter;
 
 class LoginController extends Controller
 {
@@ -38,7 +39,10 @@ class LoginController extends Controller
     }
     public function username()
     {
-        return 'mobile';
+        $value=request()->input('idenyify');
+        $Field=Filter_var($value,FILTER_VALIDATE_EMAIL)?'email':'mobile';
+        request()->merge([$Field=>$value]);
+        return $Field;
     }
 
 }

@@ -12,14 +12,14 @@
                         @csrf
 
                         <div class="form-group row">
-                            <label for="mobile" class="col-md-4 col-form-label text-md-right">{{ __(' MOBILE') }}</label>
+                            <label for="idenyify" class="col-md-4 col-form-label text-md-right">{{ __('EMAIL OR MOBILE') }}</label>
 
                             <div class="col-md-6">
-                                <input id="mobile" type="return 'mobile'";
+                                <input id="idenyify" type="return 'mobile'";
 
-                                       class="form-control @error('mobile') is-invalid @enderror" name="mobile" value="{{ old('mobile') }}" required required autocomplete="mobile" autofocus>
+                                       class="form-control @error('idenyify') is-invalid @enderror" name="idenyify" value="{{ old('idenyify') }}" required required autocomplete="idenyify" >
 
-                                @error('mobile')
+                                @error('idenyify')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
